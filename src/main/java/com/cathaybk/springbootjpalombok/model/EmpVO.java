@@ -1,0 +1,18 @@
+package com.cathaybk.springbootjpalombok.model;
+
+
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.ToString;
+
+// @RequiredArgsConstructor(access = AccessLevel.PUBLIC)
+@RequiredArgsConstructor(access = AccessLevel.PUBLIC, staticName = "getInstance"/*自訂*/)
+@ToString
+public class EmpVO {
+
+    @lombok.NonNull
+    private String empCode; // 員工編號
+    @lombok.NonNull
+    private String empName; // 員工姓名
+
+}
