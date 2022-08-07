@@ -81,4 +81,41 @@ public class DeptVO_Test {
         System.out.println("deptMap = " + deptMap);
     }
 
+    // @Test
+    // @Disabled
+    // public void test_006(){
+    //     // 測試：使用 builder 建立物件
+    //     DeptVO deptVO_A = DeptVO.builder().build();
+    //     System.out.println("deptVO_A = " + deptVO_A);
+    //
+    //     // 測試：使用 @Tolerate 預設建構子
+    //     DeptVO deptVO_B = new DeptVO();
+    //     System.out.println("deptVO_B = " + deptVO_B);
+    //
+    //     // 測試：使用 @Tolerate 單參數建構子
+    //     DeptVO deptVO_C = new DeptVO(new DeptData());
+    //     System.out.println("deptVO_C = " + deptVO_C);
+    // }
+
+    @Test
+    @Disabled
+    public void test_007(){
+        // 測試：使用 @Builder.build() 建立物件 (注意初始值丟失問題)
+        DeptVO deptVO_A = DeptVO.builder().build();
+        System.out.println("deptVO_A = " + deptVO_A);
+
+        // 測試：使用 @NoArgsConstructor 預設建構子
+        DeptVO deptVO_B = new DeptVO();
+        System.out.println("deptVO_B = " + deptVO_B);
+    }
+
+    @Test
+    @Disabled
+    public void test_008(){
+        // // 測試：使用 @AllArgsConstructor
+        // // 若沒 @Builder.Default 標註，則不會將 final 修飾的屬性加入建構式
+        // DeptVO deptVO_Z = new DeptVO(99, "交通部", 77);
+        // System.out.println("deptVO_Z = " + deptVO_Z);
+    }
+
 }
