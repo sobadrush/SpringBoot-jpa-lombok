@@ -13,6 +13,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class EmpVO_Test {
@@ -99,6 +100,24 @@ public class EmpVO_Test {
                     return b;
                 });
         System.out.println("empNames = " + empNames);
+    }
+
+    @Test
+    @Disabled
+    public void test_007() {
+        IntStream intStream = IntStream.rangeClosed(1, 10);
+
+        // Integer sumAns = intStream.reduce(100, (int1, int2) -> {
+        //     System.out.println(Thread.currentThread().getName() + " - " + (int1 + int2));
+        //     return int1 + int2;
+        // });
+
+        // Integer sumAns = intStream.parallel()
+        //         .reduce(100, (int1, int2) -> {
+        //             System.out.println(Thread.currentThread().getName() + " - " + (int1 + int2));
+        //             return int1 + int2;
+        //         });
+        // System.out.println("sumAns = " + sumAns);
     }
 
     // 建立員工List
